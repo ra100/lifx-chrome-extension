@@ -1,0 +1,123 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+
+
+<html>
+  <head>
+    <title>LIFX Chrome Controller</title>
+      <link rel="stylesheet" href="custom.css">
+      <link rel="stylesheet" href="colorpicker.css">
+      <link rel="stylesheet" href="mdl/material.min.css">
+      <script src="mdl/material.min.js"></script>
+      <script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+      <!--getmdl-select-->
+      <script src="mdl/getmdl-select.min.js"></script>
+      <link rel="stylesheet" href="mdl/getmdl-select.min.css">
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+  </head>
+
+
+  <body>
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__titl centered"><span><img class="logo" src="iconslifx/logo.png" alt=""></span><span><h2 class="mdl-card__title-text headertitle">Web Control</h2></span></div>
+  <div id="tokenSection"><p class="tokenP">Please visit this <a style="font-weight: 600;" href="https://cloud.lifx.com/settings">link</a> and login with your LIFX account to generate a Token. Copy and paste the generated Token in the field below to get started.</p>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <div class="textfield">
+          <input class="mdl-textfield__input form-control" type="text" id="field">
+          <label class="mdl-textfield__label" for="sample1">Token</label>
+    </div>
+    <div class="textsubmit">
+        <span><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="submitValue" type="submit" value="Go">SUBMIT</button></span>
+    </div>
+  </div>
+  </div>
+  <br>
+  <div id="bulbSection" class="mdl-card__actions mdl-card--border">
+  <h3 class="mdl-card__title-text">Select a Bulb:</h3>
+     <select id="dropdownBulb">
+        <option value="all">All</option>
+    </select>
+    </div>
+  <div id="brightSection" class="mdl-card__actions mdl-card--border">
+    <h3 class="mdl-card__title-text">Select Brightness Level:</h3>
+    <br>
+    <br>
+    <span class="label1"> <img class="iconsize" src="iconslifx/off.png" alt=""></span>
+    <span class="label2"><img class="iconsize" src="iconslifx/on1.png" alt=""></span>
+    <span class="label3"><img class="iconsize" src="iconslifx/on2.png" alt=""></span>
+    <span class="label4"><img class="iconsize" src="iconslifx/on3.png" alt=""></span>
+    <p><input id="slider" class="mdl-slider mdl-js-slider" type="range" min="0" max="3" value="0" step="1" tabindex="0"></p>
+  </div>
+    <div id="colorSection" class="mdl-card__actions mdl-card--border">
+    <h3 class="mdl-card__title-text">Select Light Color:</h3>
+    <!-- Color Picker -->
+    <div class="color-filters">
+      <ul>
+        <li>
+          <input type="radio" name="colorFilters" id="red-filter">
+          <label for="red-filter" id="red-filter"></label>
+        </li>
+        <li>
+          <input type="radio" name="colorFilters" id="orange-filter">
+          <label for="orange-filter" id="orange-filter">
+        </li>
+        <li>
+          <input type="radio" name="colorFilters" id="yellow-filter">
+          <label for="yellow-filter" id="yellow-filter"></label>
+        </li>
+        <li>
+          <input type="radio" name="colorFilters" id="green-filter">
+          <label for="green-filter" id="green-filter"></label>
+        </li>
+        <li>
+          <input type="radio" name="colorFilters" id="teal-filter">
+          <label for="teal-filter" id="teal-filter"></label>
+        </li>
+        <li>
+          <input type="radio" name="colorFilters" id="blue-filter">
+          <label for="blue-filter" id="blue-filter"></label>
+        </li>
+        <li>
+          <input type="radio" name="colorFilters" id="purple-filter">
+          <label for="purple-filter" id="purple-filter"></label>
+        </li>
+        <li>
+          <input type="radio" name="colorFilters" id="pink-filter">
+          <label for="pink-filter" id="pink-filter"></label>
+        </li>
+      </ul>
+    </div>
+      <div class="color-filters secRow">
+      <ul>
+        <li>
+          <input type="radio" name="colorFilters" id="neutral-filter">
+          <label for="neutral-filter" id="neutral-filter"></label>
+        </li>
+        <li>
+          <input type="radio" name="colorFilters" id="classic-filter">
+          <label for="classic-filter" id="classic-filter">
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button type="button" class="mdl-snackbar__action"></button>
+  </div>
+</div>
+</div>
+    <!-- <div id="status"></div> -->
+  <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>
+

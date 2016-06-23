@@ -1,0 +1,32 @@
+{
+  "name": "LIFX Web Control",
+  "version": "0.6.0",
+  "manifest_version": 2,
+  "description": "A Minimalist Chrome Extension to Control your LIFX Lights.",
+  "homepage_url": "http://whoisjuan.github.io/lifx",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_title": "browser action demo",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "cookies",
+    "notifications",
+    "storage",
+    "https://api.lifx.com/*",
+    "https://lifx.com//",
+    "https://community.lifx.com/*",
+    "https://*.lifx.com/"
+  ]
+}

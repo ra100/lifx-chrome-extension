@@ -1,0 +1,108 @@
+html {
+  height: 221px !important;
+}
+
+
+body {
+  background-color: #FFFFFF;
+  color: #663399;
+}
+
+.mdl-card {
+  background-color: #FFFFFF !important;
+}
+
+.logo {
+  height: 35px;
+  margin-top: 15px;
+}
+
+.centered {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headertitle {
+  font-weight: 500 !important;
+  font-size: 17px !important;
+
+}
+
+.iconsize {
+  height: 32px;
+}
+
+.iconsize2 {
+  height: 23px;
+}
+
+.label1 {
+  margin-left: 12px;
+}
+
+.label2 {
+  margin-left: calc((100%/3) - 52px);
+}
+
+.label3 {
+  margin-left: calc((100%/3) - 52px);
+}
+
+.label4 {
+  float: right;
+  margin-right: 10px;
+}
+
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded {
+    margin-left: 10%;
+}
+
+.textsubmit {
+    margin-left: 110%;
+}
+
+.textfield {
+/* coming*/
+}
+
+.center-layout {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.demo-card-wide.mdl-card {
+    width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+    color: purple;
+    height: 30px;
+    /*background: url('../assets/demos/welcome_card.jpg') center / cover;*/
+}
+.demo-card-wide > .mdl-card__menu {
+    color: purple;
+}
+
+select#dropdownBulb {
+    width: 300px;
+    font-size: 20px;
+    color: white;
+    margin-left: 80px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: #3F51B5;
+}
+
+.tokenP {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.color-filters.secRow {
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    margin-left: 153px;
+    margin-top: -30px;
+}
